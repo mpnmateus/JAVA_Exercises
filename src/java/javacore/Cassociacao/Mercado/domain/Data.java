@@ -10,7 +10,9 @@ public class Data {
     }
 
     public String toString(){
-
+        return String.format(
+                "%d/%d/%d", this.dia, this.mes, this.ano
+        );
     }
 
     public int getDia() {
