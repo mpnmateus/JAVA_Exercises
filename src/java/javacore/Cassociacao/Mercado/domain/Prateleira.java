@@ -34,4 +34,30 @@ public class Prateleira {
         }
         return null;
     }
+
+    //Getters and Setters
+
+    public Produto getProd1() {
+        return prod1;
+    }
+
+    public void setProd1(Produto prod1) {
+        this.prod1 = prod1;
+    }
+
+    public Produto getProd2() {
+        return prod2;
+    }
+
+    public void setProd2(Produto prod2) {
+        this.prod2 = prod2;
+    }
+
+    public Produto getProd3() {
+        return prod3;
+    }
+
+    public void setProd3(Produto prod3) {
+        this.prod3 = prod3;
+    }
 }
