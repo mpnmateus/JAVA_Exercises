@@ -12,6 +12,14 @@ public class Prateleira {
     public Prateleira (){
     }
 
+    //Impressão
+    public String toString(){
+        return String.format(
+                "Prateleira: [Produto 1 = %s, Produto 2 = %s, Produto 3 = %s]",
+                this.prod1, this.prod2, this.prod3
+        );
+    }
+
     public Produto produtoMaisCaro(){
         if (this.prod1 != null || this.prod2 != null || this.prod3 != null){
             if (this.prod1.getPreco() > this.prod2.getPreco() && this.prod1.getPreco() > this.prod3.getPreco()){
