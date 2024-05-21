@@ -11,11 +11,25 @@ public class Produto {
         this.dataValidade = dV;
     }
 
+    //Impressão
     public String toString(){
         return String.format(
                 "Produto: [Nome = %s, Preço = %d, Data de Validade = %s]",
                 this.nome, this.preco, this.dataValidade
         );
+    }
+
+    //Método produto vencido
+    public boolean verificaProdutoVencido(Data d){
+        if(d.getAno() < dataValidade.getAno()){
+            return false;
+        } else if (d.getMes() < dataValidade.getMes()){
+            return false;
+        } else if (d.getDia() < dataValidade.getDia()) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public String getNome() {
