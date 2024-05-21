@@ -1,4 +1,4 @@
-package java.javacore.Cassociacao.Livro.domain;
+package estudosjava.javacore.Cassociacao.Livro.domain;
 
 public class Livro {
     private String titulo;

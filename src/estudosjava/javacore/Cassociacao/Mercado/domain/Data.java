@@ -1,4 +1,4 @@
-package java.javacore.Cassociacao.Mercado.domain;
+package estudosjava.javacore.Cassociacao.Mercado.domain;
 
 public class Data {
     int dia, mes, ano;

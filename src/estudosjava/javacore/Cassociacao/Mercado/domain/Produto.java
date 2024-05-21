@@ -1,4 +1,4 @@
-package java.javacore.Cassociacao.Mercado.domain;
+package estudosjava.javacore.Cassociacao.Mercado.domain;
 
 public class Produto {
     private String nome;
@@ -7,6 +7,13 @@ public class Produto {
 
     public Produto(String n, double p, Data dV){
         this.nome = n;
+        /**
+        if (p > 0){
+            this.preco = p;
+        } else {
+            System.out.println("O preço do produto deve ser maior do que 0.");
+        }
+         **/
         this.preco = p;
         this.dataValidade = dV;
     }

@@ -1,4 +1,4 @@
-package java.javacore.Cassociacao.Funcionario.domain;
+package estudosjava.javacore.Cassociacao.Funcionario.domain;
 
 public class Calculadora {
     private int memoria;

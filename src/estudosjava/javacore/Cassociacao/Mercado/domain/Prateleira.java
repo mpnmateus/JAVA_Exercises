@@ -1,4 +1,4 @@
-package java.javacore.Cassociacao.Mercado.domain;
+package estudosjava.javacore.Cassociacao.Mercado.domain;
 
 public class Prateleira {
     private Produto prod1, prod2, prod3;

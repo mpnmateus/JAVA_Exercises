@@ -1,4 +1,4 @@
-package java.javacore.Cassociacao.Funcionario.test;
+package estudosjava.javacore.Cassociacao.Funcionario.test;
 
 import java.io.*;
 

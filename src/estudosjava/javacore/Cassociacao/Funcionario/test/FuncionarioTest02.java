@@ -1,9 +1,9 @@
-package java.javacore.Cassociacao.Funcionario.test;
+package estudosjava.javacore.Cassociacao.Funcionario.test;
 
-import java.javacore.Cassociacao.Funcionario.domain.Calculadora;
-import java.javacore.Cassociacao.Funcionario.domain.Empresa;
-import java.javacore.Cassociacao.Funcionario.domain.FuncionarioCaixa;
-import java.javacore.Cassociacao.Livro.test.Teclado;
+import estudosjava.javacore.Cassociacao.Funcionario.domain.Calculadora;
+import estudosjava.javacore.Cassociacao.Funcionario.domain.Empresa;
+import estudosjava.javacore.Cassociacao.Funcionario.domain.FuncionarioCaixa;
+
 
 public class FuncionarioTest02 {
     public static void main (String args[])

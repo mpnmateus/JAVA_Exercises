@@ -1,4 +1,4 @@
-package java.javacore.Cassociacao.Livro.test;
+package estudosjava.javacore.Cassociacao.Livro.test;
 
 import java.io.*;
 

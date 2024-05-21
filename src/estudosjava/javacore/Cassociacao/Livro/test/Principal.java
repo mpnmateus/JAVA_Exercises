@@ -1,7 +1,7 @@
-package java.javacore.Cassociacao.Livro.test;
+package estudosjava.javacore.Cassociacao.Livro.test;
 
-import java.javacore.Cassociacao.Livro.domain.Cliente;
-import java.javacore.Cassociacao.Livro.domain.Livro;
+import estudosjava.javacore.Cassociacao.Livro.domain.Cliente;
+import estudosjava.javacore.Cassociacao.Livro.domain.Livro;
 
 public class Principal {
     public static void main(String[] args) {

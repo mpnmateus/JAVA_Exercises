@@ -1,4 +1,4 @@
-package java.javacore.Cassociacao.Mercado.test;
+package estudosjava.javacore.Cassociacao.Mercado.test;
 
 import java.io.*;
 
