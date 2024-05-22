@@ -60,37 +60,52 @@ public class Principal {
         Mercado mercado = new Mercado(prateleira1, prateleira2);
 
 
-        //Mostra as informações dos produtos vencidos (supondo a data 25/04/2023)
-        System.out.println("\n---- (!!) Produtos vencidos (!!) -----");
-        Data dataAtual = new Data(25, 04, 2025);
-        if (mercado.getPrat1().getProd1()!= null){
-            if (mercado.getPrat1().getProd1().verificaProdutoVencido(dataAtual)){
-                System.out.println(mercado.getPrat1().getProd1());
-                System.out.println();
-            }
-        }
-        if (mercado.getPrat1().getProd2() != null){
-            if(mercado.getPrat1().getProd2().verificaProdutoVencido(dataAtual)){
-                System.out.println(mercado.getPrat1().getProd2());
-                System.out.println();
-            }
-        }
+        System.out.print("\n-- Produtos Vencidos --");
+        // mostra as informações dos produtos vencidos (supondo a data 25/04/2023)
+        Data dataAtual = new Data(25, 4, 2023);
+        //Prateleira 1
+        if ((mercado.getPrat1()).getProd1() != null)
+            if (((mercado.getPrat1()).getProd1()).verificaProdutoVencido(dataAtual))
+                System.out.printf("\n%s: Produto Vencido", ((mercado.getPrat1()).getProd1()).getNome());
+
+        if ((mercado.getPrat1()).getProd2() != null)
+            if (((mercado.getPrat1()).getProd2()).verificaProdutoVencido(dataAtual))
+                System.out.printf("\n%s: Produto Vencido", ((mercado.getPrat1()).getProd2()).getNome());
+
+        if ((mercado.getPrat1()).getProd3() != null)
+            if (((mercado.getPrat1()).getProd3()).verificaProdutoVencido(dataAtual))
+                System.out.printf("\n%s: Produto Vencido", ((mercado.getPrat1()).getProd3()).getNome());
+
+        //Prateleira 2
+        if ((mercado.getPrat2()).getProd1() != null)
+            if (((mercado.getPrat2()).getProd1()).verificaProdutoVencido(dataAtual))
+                System.out.printf("\n%s: Produto Vencido", ((mercado.getPrat2()).getProd1()).getNome());
+
+        if ((mercado.getPrat2()).getProd2() != null)
+            if (((mercado.getPrat2()).getProd2()).verificaProdutoVencido(dataAtual))
+                System.out.printf("\n%s: Produto Vencido", ((mercado.getPrat2()).getProd2()).getNome());
+
+        if ((mercado.getPrat2()).getProd3() != null)
+            if (((mercado.getPrat2()).getProd3()).verificaProdutoVencido(dataAtual))
+                System.out.printf("\n%s: Produto Vencido", ((mercado.getPrat2()).getProd3()).getNome());
 
         //Imprime as informações do produto mais caro do mercado
         System.out.println("\n\n--- Produto mais caro ---");
-        if (mercado.getPrat1() != null){
-
-        }
+        if (mercado.getPrat1().produtoMaisCaro() != null){
+            if (mercado.getPrat1().produtoMaisCaro().getPreco() > mercado.getPrat2().produtoMaisCaro().getPreco())
+                System.out.printf("\n%s R$ %.2f", mercado.getPrat1().produtoMaisCaro().getNome(), mercado.getPrat1().produtoMaisCaro().getPreco());
+            else if (mercado.getPrat2().produtoMaisCaro().getPreco() > mercado.getPrat1().produtoMaisCaro().getPreco())
+                System.out.printf("\n%s R$ %.2f", mercado.getPrat2().produtoMaisCaro().getNome(), mercado.getPrat2().produtoMaisCaro().getPreco());
+            } else {
+                System.out.println("-- Produtos com preços iguais --");
+                System.out.printf("\n%s R$ %.2f", mercado.getPrat1().produtoMaisCaro().getNome(), mercado.getPrat1().produtoMaisCaro().getPreco());
+                System.out.printf("\n%s R$ %.2f", mercado.getPrat2().produtoMaisCaro().getNome(), mercado.getPrat2().produtoMaisCaro().getPreco());
+            }
 
         //Imprime a média de preço dos produtos do mercado
         System.out.println("\n\n---- Média de preço dos produtos -----");
         System.out.printf("Média de preço: R$ %.2f", mercado.mediaValorProdutos());
 
-        /**
-        System.out.println("\n------Prateleira 1--------");
-        System.out.println(mercado.getPrat1());
-        System.out.println("\n------Prateleira 2--------");
-        System.out.println(mercado.getPrat2());
-        **/
+
     }
 }
