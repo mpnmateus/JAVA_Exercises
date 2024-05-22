@@ -14,10 +14,12 @@ public class Prateleira {
 
     //Impressão
     public String toString(){
-        return String.format(
-                "Prateleira: [Produto 1 = %s, Produto 2 = %s, Produto 3 = %s]",
+        return
+                String.format(
+                "\nPrateleira: [\nProduto 1 = %s, \nProduto 2 = %s, \nProduto 3 = %s]",
                 this.prod1, this.prod2, this.prod3
         );
+
     }
 
     public Produto produtoMaisCaro(){

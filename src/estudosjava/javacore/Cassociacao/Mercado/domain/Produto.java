@@ -13,10 +13,12 @@ public class Produto {
 
     //Impressão
     public String toString(){
-        return String.format(
-                "Produto: [Nome = %s, Preço = %d, Data de Validade = %s]",
+        return
+                String.format(
+                "\nProduto: [\nNome = %s, \nPreço = %f, \nData de Validade = %s]",
                 this.nome, this.preco, this.dataValidade
         );
+
     }
 
     //Método produto vencido

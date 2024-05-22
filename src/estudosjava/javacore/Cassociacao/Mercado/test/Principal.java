@@ -21,8 +21,10 @@ public class Principal {
 
         prateleira2.setProd1(new Produto("Cortina", 167.98, new Data(13,10,2025)));
 
-        //System.out.println(mercado.getPrat1().produtoMaisCaro());
-        //System.out.println(mercado.getPrat2().produtoMaisCaro());
+        System.out.println("\n------Prateleira 1--------");
+        System.out.println(mercado.getPrat1());
+        System.out.println("\n------Prateleira 2--------");
+        System.out.println(mercado.getPrat2());
 
     }
 }
