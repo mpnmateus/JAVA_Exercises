@@ -18,20 +18,23 @@ public class Produto {
                 "\n[Nome = %s, \nPreço = %f, \nData de Validade = %s]",
                 this.nome, this.preco, dataValidade.toString()
         );
-
     }
 
     //Método produto vencido
-    public boolean verificaProdutoVencido(Data d){
-        if(d.getAno() < dataValidade.getAno()){
+    /**
+     * Retorna o false se o produto não está vencido de acordo com a dataRecebida (data atual) e a dataValidade.
+     * Retorna o true se o produto está vencido de acordo com a dataRecebida.
+     */
+    public boolean verificaProdutoVencido(Data dataRecebida){
+        if(dataRecebida.getAno() < dataValidade.getAno())
             return false;
-        } else if (d.getMes() < dataValidade.getMes()){
-            return false;
-        } else if (d.getDia() < dataValidade.getDia()) {
-            return false;
-        } else {
-            return true;
-        }
+        else if (dataRecebida.getAno() == dataValidade.getAno())
+            if (dataRecebida.getMes() < dataValidade.getMes())
+                return false;
+            else if (dataRecebida.getMes() == dataValidade.getMes())
+                if (dataRecebida.getDia() < dataValidade.getDia())
+                    return false;
+        return true;
     }
 
     public String getNome() {
