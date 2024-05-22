@@ -43,16 +43,25 @@ public class Principal {
 
         Prateleira prateleira1 = new Prateleira(p1, p2, p3);
         Prateleira prateleira2 = new Prateleira();
-        prateleira2.setProd1(new Produto("Cortina", 167.98, new Data(13,10,2025)));
+        prateleira2.setProd1(new Produto("Cortina", 167.98, new Data(13,10,2022)));
 
         Mercado mercado = new Mercado(prateleira1, prateleira2);
 
+        System.out.println("\n---- (!!) Produtos vencidos (!!) -----");
+        if (mercado.getPrat1().getProd1()!= null){
+            if (mercado.getPrat1().getProd1().verificaProdutoVencido(new Data(25, 04, 2025))){
+                System.out.println(mercado.getPrat1().getProd1());
+                System.out.println();
+            }
+        }
 
 
+
+        /**
         System.out.println("\n------Prateleira 1--------");
         System.out.println(mercado.getPrat1());
         System.out.println("\n------Prateleira 2--------");
         System.out.println(mercado.getPrat2());
-
+        **/
     }
 }
