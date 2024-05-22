@@ -10,6 +10,9 @@ public class Prateleira {
     }
 
     public Prateleira (){
+        //prod1 = null;
+        //prod2 = null;
+        //prod3 = null;
     }
 
     //Impressão
