@@ -14,11 +14,20 @@ public class Prateleira {
 
     //Impressão
     public String toString(){
-        return
-                String.format(
-                "\nPrateleira: [\nProduto 1 = %s, \nProduto 2 = %s, \nProduto 3 = %s]",
-                this.prod1, this.prod2, this.prod3
-        );
+        String strProdutos = "";
+        if (prod1 != null){
+            strProdutos += "Produto 1: ";
+            strProdutos += prod1.toString() + "\n";
+        }
+        if (prod2 != null){
+            strProdutos += "Produto 2: ";
+            strProdutos += prod2.toString() + "\n";
+        }
+        if (prod3 != null){
+            strProdutos += "Produto 3: ";
+            strProdutos += prod3.toString() + "\n";
+        }
+        return "-- Prateleira -- \nProdutos:\n" + strProdutos;
 
     }
 
