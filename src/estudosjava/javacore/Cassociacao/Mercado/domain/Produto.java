@@ -7,14 +7,15 @@ public class Produto {
 
     public Produto(String n, double p, Data dV){
         this.nome = n;
-        /**
+
         if (p > 0){
             this.preco = p;
         } else {
+            this.preco = 0;
             System.out.println("O preço do produto deve ser maior do que 0.");
         }
-         **/
-        this.preco = p;
+
+
         this.dataValidade = dV;
     }
 
