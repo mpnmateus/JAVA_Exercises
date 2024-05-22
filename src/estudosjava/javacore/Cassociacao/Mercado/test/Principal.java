@@ -19,12 +19,10 @@ public class Principal {
 
         Mercado mercado = new Mercado(prateleira1, prateleira2);
 
-        prateleira2.getProd1().setNome("Cortina");
-        prateleira2.getProd1().setPreco(167.98);
-        prateleira2.getProd1().setDataValidade(new Data(13, 10, 2025));
+        prateleira2.setProd1(new Produto("Cortina", 167.98, new Data(13,10,2025)));
 
-        System.out.println(mercado.getPrat1().produtoMaisCaro());
-        System.out.println(mercado.getPrat2().produtoMaisCaro());
+        //System.out.println(mercado.getPrat1().produtoMaisCaro());
+        //System.out.println(mercado.getPrat2().produtoMaisCaro());
 
     }
 }
