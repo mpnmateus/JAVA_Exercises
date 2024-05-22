@@ -15,8 +15,8 @@ public class Produto {
     public String toString(){
         return
                 String.format(
-                "\nProduto: [\nNome = %s, \nPreço = %f, \nData de Validade = %s]",
-                this.nome, this.preco, this.dataValidade
+                "\n[Nome = %s, \nPreço = %f, \nData de Validade = %s]",
+                this.nome, this.preco, dataValidade.toString()
         );
 
     }
