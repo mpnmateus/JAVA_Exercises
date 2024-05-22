@@ -23,15 +23,13 @@ public class Prateleira {
     }
 
     public Produto produtoMaisCaro(){
-        if (this.prod1 != null || this.prod2 != null || this.prod3 != null){
+        if (this.prod1 != null && this.prod2 != null && this.prod3 != null){
             if (this.prod1.getPreco() > this.prod2.getPreco() && this.prod1.getPreco() > this.prod3.getPreco()){
                 return this.prod1;
             } else if (this.prod2.getPreco() > this.prod1.getPreco() && this.prod2.getPreco() > this.prod3.getPreco()) {
                 return this.prod2;
-            } else if(this.prod3.getPreco() > this.prod1.getPreco() && this.prod3.getPreco() > this.prod2.getPreco()){
-                return this.prod3;
             } else {
-                return null;
+                return this.prod3;
             }
         }
         return null;
