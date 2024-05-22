@@ -48,14 +48,23 @@ public class Principal {
         Mercado mercado = new Mercado(prateleira1, prateleira2);
 
         System.out.println("\n---- (!!) Produtos vencidos (!!) -----");
+        Data dataVencimento = new Data(25, 04, 2025);
         if (mercado.getPrat1().getProd1()!= null){
-            if (mercado.getPrat1().getProd1().verificaProdutoVencido(new Data(25, 04, 2025))){
+            if (mercado.getPrat1().getProd1().verificaProdutoVencido(dataVencimento)){
                 System.out.println(mercado.getPrat1().getProd1());
                 System.out.println();
             }
         }
+        if (mercado.getPrat1().getProd2() != null){
+            if(mercado.getPrat1().getProd2().verificaProdutoVencido(dataVencimento)){
+                System.out.println(mercado.getPrat1().getProd2());
+                System.out.println();
+            }
+        }
 
-
+        //Imprime a média de preço dos produtos do mercado
+        System.out.println("\n\n---- Média de preço dos produtos -----");
+        System.out.printf("Média de preço: R$ %.2f", mercado.mediaValorProdutos());
 
         /**
         System.out.println("\n------Prateleira 1--------");
