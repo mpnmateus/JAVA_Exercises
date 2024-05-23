@@ -9,6 +9,7 @@ public class Data {
         this.dia = dia;
     }
 
+    @Override
     public String toString(){
         return String.format(
                 "%d/%d/%d",
