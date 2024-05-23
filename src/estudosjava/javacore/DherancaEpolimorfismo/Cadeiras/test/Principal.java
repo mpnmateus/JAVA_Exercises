@@ -28,5 +28,7 @@ public class Principal {
                 Teclado.leInt("Digite o parâmetro B da 4ª cadeira: ")));
 
         Sala sala = new Sala(cad1, cad2, cad3, cad4);
+
+        System.out.println(sala);
     }
 }
