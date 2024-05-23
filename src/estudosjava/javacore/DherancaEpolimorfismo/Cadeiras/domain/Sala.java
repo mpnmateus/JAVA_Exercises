@@ -10,7 +10,7 @@ public class Sala {
         this.cadeira4 = cad4;
     }
 
-    //
+    //Retorna a qnt de cadeiras com mesa que estão livres para alguém sentar (sem alunos)
     public int cadeirasComMesaDisponiveis(){
         int soma = 0;
         if (cadeira1 instanceof CadeiraComMesa)
@@ -26,6 +26,24 @@ public class Sala {
             if (this.cadeira4.getAluno() == null)
                 soma++;
 
+        return soma;
+    }
+
+    //Retorna a qnt de cadeiras com rodinhas que estão livres para alguém sentar (sem alunos)
+    public int cadeirasComRodinhasDisponiveis(){
+        int soma = 0;
+        if(cadeira1 instanceof CadeiraComRodinhas)
+            if (this.cadeira1.getAluno() == null)
+                soma++;
+        if (cadeira2 instanceof CadeiraComRodinhas)
+            if (this.cadeira2.getAluno() == null)
+                soma++;
+        if (cadeira3 instanceof CadeiraComRodinhas)
+            if (this.cadeira3.getAluno() == null)
+                soma++;
+        if (cadeira4 instanceof CadeiraComRodinhas)
+            if (this.cadeira4.getAluno() == null)
+                soma++;
         return soma;
     }
 
