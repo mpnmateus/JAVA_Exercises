@@ -47,6 +47,33 @@ public class Sala {
         return soma;
     }
 
+    public String entraAluno(Aluno aluno, String tipoCadeiraSentar){
+        if (tipoCadeiraSentar.equalsIgnoreCase("mesa"))
+
+            if (this.cadeira1.getAluno() == null || this.cadeira2.getAluno() == null || this.cadeira3.getAluno() == null ||
+            this.cadeira4.getAluno() == null) {
+
+                if (cadeira1 instanceof CadeiraComMesa)
+                    if (this.cadeira1.getAluno() == null)
+                        return this.cadeira1.toString();
+                    else if (cadeira2 instanceof CadeiraComMesa)
+                        if (this.cadeira2.getAluno() == null)
+                            return this.cadeira2.toString();
+                        else if (cadeira3 instanceof CadeiraComMesa)
+                            if (this.cadeira3.getAluno() == null)
+                                return this.cadeira3.toString();
+                            else if (cadeira4 instanceof CadeiraComMesa)
+                                if (this.cadeira4.getAluno() == null)
+                                    return this.cadeira4.toString();
+
+            } else {
+                return null;
+            }
+        if (tipoCadeiraSentar.equalsIgnoreCase("rodinha")){
+
+        }
+    }
+
     public String toString(){
         return String.format(
                 "Sala: [ Cadeira 1 = %s, " +
