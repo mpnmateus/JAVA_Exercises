@@ -48,8 +48,10 @@ public class Sala {
     }
 
     public String entraAluno(Aluno aluno, String tipoCadeiraSentar){
-        if (this.cadeira1.getAluno() == null || this.cadeira2.getAluno() == null || this.cadeira3.getAluno() == null ||
-        this.cadeira4.getAluno() == null) {
+        //Verifica se há cadeiras livres. Caso não, já retorna null.
+        if (this.cadeira1.getAluno() != null || this.cadeira2.getAluno() != null || this.cadeira3.getAluno() != null ||
+        this.cadeira4.getAluno() != null) {
+            //Caso haja alguma cadeira livre, verifica uma a uma se a cadeira livre é com mesa
             if (tipoCadeiraSentar.equalsIgnoreCase("mesa"))
                 if (cadeira1 instanceof CadeiraComMesa)
                     if (this.cadeira1.getAluno() == null)
@@ -63,20 +65,40 @@ public class Sala {
                             else if (cadeira4 instanceof CadeiraComMesa)
                                 if (this.cadeira4.getAluno() == null)
                                     return this.cadeira4.toString();
+
+            //Caso não haja nenhuma cadeira com mesa livre, aloca o aluno na primeira cadeira livre disponível
+            if (this.cadeira1.getAluno() == null)
+                return this.cadeira1.toString();
+            else if (this.cadeira2.getAluno() == null)
+                return this.cadeira2.toString();
+            else if (this.cadeira3.getAluno() == null)
+                return this.cadeira3.toString();
+            else if (this.cadeira4.getAluno() == null)
+                return this.cadeira4.toString();
+
+            //Caso haja alguma cadeira livre, verifica uma a uma se a cadeira livre é com rodinha
             if (tipoCadeiraSentar.equalsIgnoreCase("rodinha"))
-                if (cadeira1 instanceof CadeiraComMesa)
+                if (cadeira1 instanceof CadeiraComRodinhas)
                     if (this.cadeira1.getAluno() == null)
                         return this.cadeira1.toString();
-                    else if (cadeira2 instanceof CadeiraComMesa)
+                    else if (cadeira2 instanceof CadeiraComRodinhas)
                         if (this.cadeira2.getAluno() == null)
                             return this.cadeira2.toString();
-                        else if (cadeira3 instanceof CadeiraComMesa)
+                        else if (cadeira3 instanceof CadeiraComRodinhas)
                             if (this.cadeira3.getAluno() == null)
                                 return this.cadeira3.toString();
-                            else if (cadeira4 instanceof CadeiraComMesa)
+                            else if (cadeira4 instanceof CadeiraComRodinhas)
                                 if (this.cadeira4.getAluno() == null)
                                     return this.cadeira4.toString();
-
+            //Caso não haja nenhuma cadeira com rodinha livre, aloca o aluno na primeira cadeira livre disponível
+            if (this.cadeira1.getAluno() == null)
+                return this.cadeira1.toString();
+            else if (this.cadeira2.getAluno() == null)
+                return this.cadeira2.toString();
+            else if (this.cadeira3.getAluno() == null)
+                return this.cadeira3.toString();
+            else if (this.cadeira4.getAluno() == null)
+                return this.cadeira4.toString();
 
         } else {
             return null;
