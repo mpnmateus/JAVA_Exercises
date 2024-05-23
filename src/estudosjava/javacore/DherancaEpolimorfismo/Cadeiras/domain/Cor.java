@@ -9,6 +9,7 @@ public class Cor {
         this.b = b;
     }
 
+    @Override
     public String toString(){
         return String.format(
                 "Cor: [R = %d, G = %d, B = %d",

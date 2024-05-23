@@ -9,6 +9,7 @@ public class Aluno {
         this.idade = idade;
     }
 
+    @Override
     public String toString(){
         return String.format(
                 "Aluno: [Nome = %s, Idade = %d",
