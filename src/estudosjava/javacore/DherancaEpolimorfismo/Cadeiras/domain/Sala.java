@@ -10,6 +10,25 @@ public class Sala {
         this.cadeira4 = cad4;
     }
 
+    //
+    public int cadeirasComMesaDisponiveis(){
+        int soma = 0;
+        if (cadeira1 instanceof CadeiraComMesa)
+            if (this.cadeira1.getAluno() == null)
+                soma++;
+        if (cadeira2 instanceof CadeiraComMesa)
+            if (this.cadeira2.getAluno() == null)
+                soma++;
+        if (cadeira3 instanceof CadeiraComMesa)
+            if (this.cadeira3.getAluno() == null)
+                soma++;
+        if (cadeira4 instanceof CadeiraComMesa)
+            if (this.cadeira4.getAluno() == null)
+                soma++;
+
+        return soma;
+    }
+
     public String toString(){
         return String.format(
                 "Sala: [ Cadeira 1 = %s, " +
