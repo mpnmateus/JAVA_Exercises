@@ -19,6 +19,19 @@ public class Cadeira {
 
     }
 
+    public Cor getCor() {
+        return cor;
+    }
 
+    public void setCor(Cor cor) {
+        this.cor = cor;
+    }
 
+    public Aluno getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
 }
