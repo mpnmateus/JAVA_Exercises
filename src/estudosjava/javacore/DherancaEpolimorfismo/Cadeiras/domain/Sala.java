@@ -108,10 +108,10 @@ public class Sala {
 
     public String toString(){
         return String.format(
-                "Sala: [ Cadeira 1 = %s, " +
-                "Cadeira 2 = %s, " +
-                "Cadeira 3 = %s, " +
-                "Cadeira 4 = %s ",
+                "Sala: \nCadeira 1 = %s, " +
+                "\nCadeira 2 = %s, " +
+                "\nCadeira 3 = %s, " +
+                "\nCadeira 4 = %s ",
                 this.cadeira1.toString(), this.cadeira2.toString(), this.cadeira3.toString(),
                 this.cadeira4.toString()
         );

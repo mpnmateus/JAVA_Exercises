@@ -15,7 +15,7 @@ public class Cadeira {
             strAluno += "Aluno = ";
             strAluno += aluno.toString();
         }
-        return "-- Cadeira -- " + "\nCor: " + this.cor.toString() + strAluno;
+        return this.cor.toString() + strAluno;
 
     }
 

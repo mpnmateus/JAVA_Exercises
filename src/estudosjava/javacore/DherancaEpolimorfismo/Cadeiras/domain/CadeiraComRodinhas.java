@@ -16,6 +16,8 @@ public class CadeiraComRodinhas extends Cadeira { //um tipo de cadeira (cadeira 
         );
     }
 
+
+
     public Data getDataUltimaManutencao() {
         return dataUltimaManutencao;
     }

@@ -12,7 +12,7 @@ public class Cor {
     @Override
     public String toString(){
         return String.format(
-                "Cor: [R = %d, G = %d, B = %d",
+                "Cor: [R = %d, G = %d, B = %d]",
                 this.r, this.g, this.b
         );
     }

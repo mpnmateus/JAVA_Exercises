@@ -3,6 +3,7 @@ package estudosjava.javacore.DherancaEpolimorfismo.Cadeiras.domain;
 public class CadeiraComMesa extends Cadeira {
     private double larguraMesa, profundidadeMesa; //Largura e Profundidade da mesa acoplada
 
+
     public CadeiraComMesa(Cor cor, double largura, double profundidade){
         super(cor);
         this.larguraMesa = largura;
@@ -16,6 +17,7 @@ public class CadeiraComMesa extends Cadeira {
                 super.toString(), this.larguraMesa, this.profundidadeMesa
         );
     }
+
 
     public double getLarguraMesa() {
         return larguraMesa;
