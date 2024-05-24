@@ -37,6 +37,7 @@ public class Principal {
         //Imprime informações da sala
         System.out.println(sala);
 
+        //Seis alunos tentam entrar na sala. Só há quatro cadeiras disponíveis.
         for (int i = 1; i <= 6; i++){
             Aluno aluno;
             if (cad1.getAluno() == null || cad2.getAluno() == null || cad3.getAluno() == null ||
@@ -57,5 +58,38 @@ public class Principal {
                 System.out.println("Não há mais lugar na sala para o " + i + "º aluno.");
             }
         }
+
+        //Procura um aluno na sala abrindo uma janela na cor da cadeira em que eke está sentado
+        String nome = Teclado.leString("Digite o nome do aluno em que se quer saber a cor da cadeira: ");
+
+        int r = 0;
+        int g = 0;
+        int b = 0;
+
+        if (cad1.getAluno().getNome() == nome){
+            r = cad1.getCor().getR();
+            g = cad1.getCor().getR();
+            b = cad1.getCor().getR();
+        }
+        if (cad2.getAluno().getNome() == nome){
+            r = cad2.getCor().getR();
+            g = cad2.getCor().getR();
+            b = cad2.getCor().getR();
+        }
+        if (cad3.getAluno().getNome() == nome){
+            r = cad3.getCor().getR();
+            g = cad3.getCor().getR();
+            b = cad3.getCor().getR();
+        }
+        if (cad4.getAluno().getNome() == nome){
+            r = cad4.getCor().getR();
+            g = cad4.getCor().getR();
+            b = cad4.getCor().getR();
+        }
+
+        JFrame a = new JFrame();
+        a.setSize(200, 200);
+        a.setBackground(new Color(r, g, b));
+        a.setVisible(true);
     }
 }
